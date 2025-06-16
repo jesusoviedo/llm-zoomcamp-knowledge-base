@@ -4,4 +4,19 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "elasticsearch>=9.0.1",
+    "google-genai>=1.19.0",
+    "ipywidgets>=8.1.7",
+    "minsearch>=0.0.2",
+    "notebook>=7.4.3",
+    "openai>=1.82.1",
+    "pandas>=2.2.3",
+    "scikit-learn>=1.6.1",
+    "tqdm>=4.67.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "homework",
+]
