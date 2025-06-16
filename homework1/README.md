@@ -5,7 +5,8 @@
 ### Descargar el archivo `pyproject.toml` y `uv.lock`
 
 ```bash
-wget 
+wget https://raw.githubusercontent.com/jesusoviedo/llm-zoomcamp-knowledge-base/refs/heads/main/homework1/pyproject.toml
+wget https://raw.githubusercontent.com/jesusoviedo/llm-zoomcamp-knowledge-base/refs/heads/main/homework1/uv.lock
 ```
 
 ### Instalar las dependencias necesarias
