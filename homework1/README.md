@@ -26,7 +26,7 @@ source .venv/bin/activate
 mkdir notebook
 ```
 
-### Uso de Jupyter Notebook
+### 🧪 Uso de Jupyter Notebook
 
 1. Iniciá el entorno de notebooks:
 
@@ -34,10 +34,10 @@ mkdir notebook
 jupyter notebook &
 ```
 
-### Desarrollo y solución
+### 📝 Desarrollo y solución
 Descarga el archivo **[homework1_answers.ipynb](./notebook/homework1_answers.ipynb)** en la carpeta de notebooks para revisar los detalles de la solución de la tarea
 
-### Comandos útiles
+### 🛠️ Comandos útiles
 
 1. Para detener Jupyter Notebook:
 
