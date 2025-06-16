@@ -2,14 +2,21 @@
 
 Este repositorio centraliza mis apuntes y recursos adicionales del **LLM Zoomcamp** de DataTalksClub.
 
-## 🗂️ Estructura por semanas
+## 📚 Contenido por semana
 
 | Semana   | Contenido                             |
-| -------- | -------------------------------       |
+| -------- | ------------------------------------- |
 | Semana 1 | [Introducción a LLMs y RAG](./week1/) |
 
-
 *Cada carpeta `weekX/` incluye un README con apuntes detallados, código de ejemplo y enlaces extra.*
+
+## ✅ Tareas por semana
+
+| Semana   | Tareas                               |
+| -------- | ------------------------------------ |
+| Semana 1 | [Tarea Semana 1](./homework1/)       |
+
+*En las carpetas `homeworkX/` vas a encontrar desafíos prácticos para reforzar lo aprendido en cada semana.*
 
 ---
 
@@ -22,6 +29,7 @@ Este repositorio centraliza mis apuntes y recursos adicionales del **LLM Zoomcam
    * Ejemplos de código
    * Enlace a articulos de interes
    * Recursos adicionales
+4. En el archivo `homeworkX/README.md` podrás ver el enunciado de una tarea relacionada con el contenido de la semana, junto con su solución.
 
 ---
 
