@@ -122,6 +122,7 @@ Selección de videos para reforzar visualmente los temas abordados
 * [“Attention is All You Need”: La chispa que encendió la revolución de la IA Generativa](https://medium.com/@j92riquelme/attention-is-all-you-need-la-chispa-que-encendi%C3%B3-la-revoluci%C3%B3n-de-la-ia-generativa-5c987353039b)
 * [ReACT Agent Model](https://klu.ai/glossary/react-agent-model)
 * [What is a ReAct agent?](https://www.ibm.com/think/topics/react-agent)
+* [El ciclo de vida de un proyecto de IA: de la idea a la implementación](https://medium.com/@j92riquelme/el-ciclo-de-vida-de-un-proyecto-de-ia-de-la-idea-a-la-implementación-bae6794121f3)
 
 
 
