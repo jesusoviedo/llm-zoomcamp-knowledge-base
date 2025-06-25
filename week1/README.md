@@ -108,10 +108,16 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [¿Qué es la generación mejorada por recuperación (RAG)?](https://cloud.google.com/use-cases/retrieval-augmented-generation?hl=es_419)
 * [Retrieval Augmented Generation (RAG) for LLMs](https://www.promptingguide.ai/research/rag)
 * [Advanced RAG: Architecture, techniques, applications and use cases and development](https://www.leewayhertz.com/advanced-rag/)
-- [Modelos de Lenguaje Extensos y Prompts](https://medium.com/@j92riquelme/modelos-de-lenguaje-extensos-y-prompts-339082864872)
-
+* [Modelos de Lenguaje Extensos y Prompts](https://medium.com/@j92riquelme/modelos-de-lenguaje-extensos-y-prompts-339082864872)
 * [OpenAI - Developer quickstart](https://platform.openai.com/docs/quickstart?api-mode=responses&lang=python)
 * [API de Gemini Developer](https://ai.google.dev/gemini-api/docs?hl=es-419)
+* [“Attention is All You Need”: La chispa que encendió la revolución de la IA Generativa](https://medium.com/@j92riquelme/attention-is-all-you-need-la-chispa-que-encendi%C3%B3-la-revoluci%C3%B3n-de-la-ia-generativa-5c987353039b)
+* [ReACT Agent Model](https://klu.ai/glossary/react-agent-model)
+* [What is a ReAct agent?](https://www.ibm.com/think/topics/react-agent)
+* [El ciclo de vida de un proyecto de IA: de la idea a la implementación](https://medium.com/@j92riquelme/el-ciclo-de-vida-de-un-proyecto-de-ia-de-la-idea-a-la-implementación-bae6794121f3)
+* [Prompt engineering is the new feature engineering](https://www.amazon.science/blog/emnlp-prompt-engineering-is-the-new-feature-engineering)
+* [Few-shot learning in practice: GPT-Neo and the Accelerated Inference API](https://huggingface.co/blog/few-shot-learning-gpt-neo-and-inference-api)
+* [Zero-shot prompting for the Flan-T5 foundation model in Amazon SageMaker JumpStart](https://aws.amazon.com/blogs/machine-learning/zero-shot-prompting-for-the-flan-t5-foundation-model-in-amazon-sagemaker-jumpstart)
 
 ## 🔗 Videos recomendados
 Selección de videos para reforzar visualmente los temas abordados
@@ -119,11 +125,6 @@ Selección de videos para reforzar visualmente los temas abordados
 * [Introducción a los modelos de lenguaje grandes](https://www.youtube.com/watch?v=Vi0ODh3ncxw&t=3s)
 * [Introduction to Responsible AI](https://www.youtube.com/watch?v=JbluXe6QpxM&t=4s)
 * [MIT 6.S191 (Google): Modelos de lenguaje grandes](https://www.youtube.com/watch?v=ZNodOsz94cc)
-* [“Attention is All You Need”: La chispa que encendió la revolución de la IA Generativa](https://medium.com/@j92riquelme/attention-is-all-you-need-la-chispa-que-encendi%C3%B3-la-revoluci%C3%B3n-de-la-ia-generativa-5c987353039b)
-* [ReACT Agent Model](https://klu.ai/glossary/react-agent-model)
-* [What is a ReAct agent?](https://www.ibm.com/think/topics/react-agent)
-* [El ciclo de vida de un proyecto de IA: de la idea a la implementación](https://medium.com/@j92riquelme/el-ciclo-de-vida-de-un-proyecto-de-ia-de-la-idea-a-la-implementación-bae6794121f3)
-
 
 
 ## Cursos adicionales recomendados
