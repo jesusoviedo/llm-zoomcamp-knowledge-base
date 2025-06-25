@@ -176,3 +176,13 @@ cython_debug/
 
 # Week 1
 week1/notebook/doc
+
+# Week 2
+week2/notebook/doc
+week2/qdrant_storage
+
+# Week 3
+week3/notebook/doc
+
+# Week 4
+week4/notebook/doc

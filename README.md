@@ -7,6 +7,7 @@ Este repositorio centraliza mis apuntes y recursos adicionales del **LLM Zoomcam
 | Semana   | Contenido                             |
 | -------- | ------------------------------------- |
 | Semana 1 | [Introducción a LLMs y RAG](./week1/) |
+| Semana 2 | [Búsqueda de vectores](./week2/) |
 
 *Cada carpeta `weekX/` incluye un README con apuntes detallados, código de ejemplo y enlaces extra.*
 
@@ -15,6 +16,7 @@ Este repositorio centraliza mis apuntes y recursos adicionales del **LLM Zoomcam
 | Semana   | Tareas                               |
 | -------- | ------------------------------------ |
 | Semana 1 | [Tarea Semana 1](./homework1/)       |
+| Semana 2 | [Tarea Semana 2](./homework2/)       |
 
 *En las carpetas `homeworkX/` vas a encontrar desafíos prácticos para reforzar lo aprendido en cada semana.*
 
