@@ -38,16 +38,94 @@ Algunos casos requieren variedad. Una manera sería filtrar resultados muy cerca
 
 Encuentros inesperados son posibles gracias a la diversidad vectorial: descubrir relaciones no evidentes entre documentos, temas o productos.
 
+### Qdrant: Motor de Búsqueda Vectorial Semántica
 
+Qdrant (Quadrant) es un **motor de base de datos vectorial de alto rendimiento** diseñado para búsquedas semánticas, recuperación de información por similitud y aplicaciones de inteligencia artificial. Está optimizado para manejar **incrustaciones vectoriales** generadas por modelos de machine learning y proporciona una API eficiente para realizar búsquedas de vecinos más cercanos (k-NN) de manera precisa, rápida y escalable.
 
+Qdrant permite almacenar vectores densos (embeddings) junto con **metadatos** estructurados, habilitando búsquedas híbridas: **vectoriales** (por similitud semántica) y **filtradas** (por condiciones estructuradas). Es ideal para aplicaciones como:
 
+- RAG (Retrieval-Augmented Generation)
+- Recomendadores
+- Motores de búsqueda semántica
+- Chatbots con contexto vectorial
 
-En Qdrant, cada vector es un “punto” con un ID, dimensiones y, opcionalmente, un payload —información adicional usada para filtrado
+#### **Características Principales**
 
+- Soporte de vectores de alta dimensión:
+- Búsqueda aproximada y exacta (HNSW, Brute Force)
+- Filtros por metadatos estructurados
+- Indexación incremental y tiempo real
+- Optimizado para CPU y disponible con soporte para GPU
+- Integración con FastEmbed y frameworks de ML/IA
+- Soporta múltiples colecciones y namespaces.
+- API REST y gRPC.
+- Persistencia en disco o en memoria.
 
+#### **Arquitectura**
 
-### Retrieval-Augmented Generation (RAG)
+![alt text](./img/image.png)
 
+- Motor de búsqueda HNSW (Hierarchical Navigable Small World): estructura de grafo eficiente para búsquedas vectoriales aproximadas.
+- Gestión de Payloads: cada vector puede tener metadatos adjuntos para filtrado semántico estructurado.
+- Shard Manager: cuando se usa en clúster, balancea y distribuye datos entre nodos.
+
+#### **Almacenamiento de Datos: Colecciones y Puntos**
+
+Qdrant organiza los datos en **colecciones**, similares a las tablas en una base de datos relacional. Cada colección agrupa un conjunto de vectores y su información asociada.
+
+![alt text](./img/image_2.png)
+
+*Colección*
+
+Una colección representa un espacio de búsqueda aislado con su propio índice, configuración y datos. Puedes tener múltiples colecciones, por ejemplo: `faq_articles`, `legal_docs` y `product_catalog`
+
+Cada colección define:
+
+- El tamaño de los vectores (dimensionalidad)
+- La métrica de similitud (`Cosine`, `Euclidean`, `Dot`)
+- Opcionalmente, si usa HNSW u otro tipo de indexado
+
+*Punto*
+
+Los datos dentro de una colección se almacenan como puntos (PointStruct). Cada punto es un objeto que representa un vector en el espacio semántico y contiene:
+- `id`: identificador único del punto (entero o UUID)
+- `vector`: array de floats (el embedding)
+- `payload`: diccionario de metadatos JSON asociados al vector
+
+Este diseño permite, realizar búsquedas vectoriales por similitud sobre `vector` y filtrar por metadatos estructurados contenidos en `payload`
+
+Los `puntos` se pueden insertar individualmente o por lotes (`batch upsert`) usando la API o el cliente oficial (`qdrant-client` para Python).
+
+*Indexación*
+
+Una vez insertados, los puntos pueden ser indexados automáticamente por el motor HNSW (si está habilitado) o buscados mediante fuerza bruta (Brute Force) si no hay índice disponible. Los índices permiten acelerar la búsqueda de vectores similares sin recorrer todos los datos.
+
+#### **Funcionalidades Clave**
+
+- `search`: buscar por similitud vectorial.
+- `recommend`: sugerencias basadas en vectores positivos y negativos.
+- `scroll`: recuperación paginada.
+- `filter`: búsquedas filtradas por metadatos (ej. categoría, fecha).
+- `payload`: adjuntar información extra (JSON) a los vectores.
+- `update/delete`: modificaciones en tiempo real.
+- `collections`: múltiples espacios de trabajo aislados.
+- `snapshots/backups`: gestión de respaldo y restauración.
+
+#### **Seguridad**
+
+- Autenticación basada en tokens (a partir de la versión 1.5).
+- Control de acceso a endpoints vía configuración de API keys.
+- Comunicaciones seguras mediante TLS (cuando se usa proxy o configuración externa).
+- Integrable con firewalls, proxies y servicios de autenticación externos.
+
+#### **Alta Disponibilidad y Redundancia**
+
+- Modo Clúster (Enterprise o Community):
+    - Distribución horizontal de shards en múltiples nodos.
+    - Replicación de shards para tolerancia a fallos.
+    - Rebalanceo automático ante cambios de topología.
+- Backups y snapshots periódicos para recuperación de desastres.
+- Qdrant Cloud ofrece despliegue gestionado con SLA, HA y escalado automático.
 
 ## 🛠️ Ejemplo práctico de Qdrant
 
@@ -118,6 +196,8 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [How Does Vector Search Work in Qdrant?](https://qdrant.tech/documentation/overview/vector-search/)
 * [How to Get Started with Qdrant Locally](https://qdrant.tech/documentation/quickstart/)
 * [Qdrant Web UI](https://qdrant.tech/documentation/web-ui/)
+* [How to Generate Text Embedings with FastEmbed](https://qdrant.tech/documentation/fastembed/fastembed-quickstart/)
+* [Using FastEmbed with Qdrant for Vector Search](https://qdrant.tech/documentation/fastembed/fastembed-semantic-search/)
 * [Qdrant - Concepts](https://qdrant.tech/documentation/concepts/)
 * [Estrellas en el cielo semántico: búsqueda vectorial con Qdrant](https://medium.com/@j92riquelme/estrellas-en-el-cielo-semántico-búsqueda-vectorial-con-qdrant-89072b49f418)
 * [An Introduction to Vector Databases](https://qdrant.tech/articles/what-is-a-vector-database/)
@@ -139,7 +219,7 @@ Selección de videos para reforzar visualmente los temas abordados
 ## Cursos adicionales recomendados
 Recursos complementarios para seguir aprendiendo y fortaleciendo tus habilidades.
 
-* [](https://www.cloudskillsboost.google/paths/118)
+* [Retrieval Optimization: From Tokenization to Vector Quantization](https://www.deeplearning.ai/short-courses/retrieval-optimization-from-tokenization-to-vector-quantization/?utm_campaign=qdrant-launch&utm_medium=qdrant&utm_source=partner-promo)
 
 ---
 
