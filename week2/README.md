@@ -127,9 +127,9 @@ Una vez insertados, los puntos pueden ser indexados automáticamente por el moto
 - Backups y snapshots periódicos para recuperación de desastres.
 - Qdrant Cloud ofrece despliegue gestionado con SLA, HA y escalado automático.
 
-### 🛠️ Ejemplo práctico de Qdrant
+## 🛠️ Ejemplo práctico de Qdrant
 
-**Creación de un entorno de desarrollo**
+### Creación de un entorno de desarrollo
 
 Para crear y gestionar el entorno de Python de este proyecto se utiliza `uv`, una herramienta moderna que combina la gestión de entornos virtuales y la resolución de dependencias de forma rápida y eficiente.
 
@@ -145,15 +145,15 @@ uv venv && uv sync
 
 Este comando creará un entorno virtual en el directorio del proyecto y sincronizará las librerías especificadas en el archivo `pyproject.toml`.
 
-**Interactuando con Qdrant usando Python**
+### Interactuando con Qdrant usando Python**
 
-**1. Descargar la imagen de Qdrant desde Docker Hub**
+#### **1. Descargar la imagen de Qdrant desde Docker Hub**
 
 ```bash
 docker pull qdrant/qdrant
 ```
 
-**2. Ejecutar el servicio**
+#### **2. Ejecutar el servicio**
 
 ```bash
 docker run -p 6333:6333 -p 6334:6334 \
@@ -168,7 +168,7 @@ Qdrant ahora estará disponible en:
 - Interfaz web: http://localhost:6333/dashboard
 - API gRPC: http://localhost:6334
 
-**3. Flujo básico**
+#### **3. Flujo básico**
 
 Si deseas ver un ejemplo práctico de cómo crear una colección, agregar elementos y realizar una consulta, puedes consultar el archivo [`0_quickstart`](./notebook/0_quickstart.ipynb).
 
@@ -180,8 +180,7 @@ Este notebook incluye ejemplos de:
 - Aplicación de filtros en las búsquedas.
 
 
-
-**4. Código Python que muestra cómo usar un LLM en conjunto con Qdrant**
+#### **4. Código Python que muestra cómo usar un LLM en conjunto con Qdrant**
 
 Si querés ver un ejemplo práctico de cómo implementar RAG (Retrieval-Augmented Generation) utilizando OpenAI o Gemini y una base de conocimiento local, podés consultar el archivo [`llm_api_examples_gemini_openai`](./notebook/llm_api_examples_gemini_openai.ipynb)
 
@@ -205,7 +204,7 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [A Complete Guide to Filtering in Vector Search](https://qdrant.tech/articles/vector-search-filtering/)
 
 
-## 🔗 Videos recomendados
+## ▶️ Videos recomendados
 Selección de videos para reforzar visualmente los temas abordados
 * [What is RAG? Building Better LLM Systems with Qdrant](https://www.youtube.com/watch?v=rtIyQPJUd_U)
 * [How Vector Search Algorithms Work: An Intro to Qdrant](https://www.youtube.com/watch?v=mXNrhyw4q84)
@@ -216,7 +215,7 @@ Selección de videos para reforzar visualmente los temas abordados
 * [Music Recommendation System with Qdrant Vector Search and Audio Embeddings](https://www.youtube.com/watch?v=id5ql-Abq4Y)
 
 
-## Cursos adicionales recomendados
+## 📚 Cursos adicionales recomendados
 Recursos complementarios para seguir aprendiendo y fortaleciendo tus habilidades.
 
 * [Retrieval Optimization: From Tokenization to Vector Quantization](https://www.deeplearning.ai/short-courses/retrieval-optimization-from-tokenization-to-vector-quantization/?utm_campaign=qdrant-launch&utm_medium=qdrant&utm_source=partner-promo)
