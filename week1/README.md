@@ -119,7 +119,7 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [Few-shot learning in practice: GPT-Neo and the Accelerated Inference API](https://huggingface.co/blog/few-shot-learning-gpt-neo-and-inference-api)
 * [Zero-shot prompting for the Flan-T5 foundation model in Amazon SageMaker JumpStart](https://aws.amazon.com/blogs/machine-learning/zero-shot-prompting-for-the-flan-t5-foundation-model-in-amazon-sagemaker-jumpstart)
 
-## 🔗 Videos recomendados
+## ▶️ Videos recomendados
 Selección de videos para reforzar visualmente los temas abordados
 * [Introducción a la IA generativa](https://www.youtube.com/watch?v=tNBvUvsScAA&t=1s)
 * [Introducción a los modelos de lenguaje grandes](https://www.youtube.com/watch?v=Vi0ODh3ncxw&t=3s)
@@ -127,7 +127,7 @@ Selección de videos para reforzar visualmente los temas abordados
 * [MIT 6.S191 (Google): Modelos de lenguaje grandes](https://www.youtube.com/watch?v=ZNodOsz94cc)
 
 
-## Cursos adicionales recomendados
+## 📚 Cursos adicionales recomendados
 Recursos complementarios para seguir aprendiendo y fortaleciendo tus habilidades.
 
 * [Introduction to Generative AI Learning Path](https://www.cloudskillsboost.google/paths/118)
