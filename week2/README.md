@@ -127,6 +127,141 @@ Una vez insertados, los puntos pueden ser indexados automáticamente por el moto
 - Backups y snapshots periódicos para recuperación de desastres.
 - Qdrant Cloud ofrece despliegue gestionado con SLA, HA y escalado automático.
 
+#### **Tipos de Búsqueda en Qdrant**
+
+Qdrant permite realizar búsquedas inteligentes sobre contenido no estructurado como texto, imágenes o audio. A través de incrustaciones (embeddings), Qdrant transforma los datos en vectores semánticos y permite realizar distintos tipos de búsqueda adaptados al caso de uso.
+
+A continuación, se explican los enfoques más comunes:
+
+#### 1. Búsqueda Semántica (Semantic Search)
+
+**¿Qué es?**
+
+La búsqueda semántica recupera información basada en **el significado** de los datos, en lugar de buscar coincidencias exactas de palabras.
+
+**¿Cómo funciona?**
+
+- Se convierte la consulta del usuario en un vector utilizando el mismo modelo de incrustación que se usó para indexar los documentos.
+- Se calcula la **similitud** entre este vector de consulta y los vectores ya almacenados en Qdrant (usualmente mediante **similitud de coseno**).
+- Se devuelven los documentos cuyos vectores están más cercanos en el espacio semántico.
+
+**¿Cuándo usarla?**
+
+- Cuando es importante recuperar resultados que expresen **la misma idea aunque usen palabras distintas**.
+- Casos como: FAQ, sistemas RAG, recuperación de contexto para LLMs, motores de búsqueda inteligentes.
+
+#### 2. Búsqueda Exacta (Exact Match Search)
+
+**¿Qué es?**
+
+Es una búsqueda basada en **coincidencias exactas** de valores en campos estructurados (metadatos), similar a filtros SQL.
+
+**¿Cómo funciona?**
+
+- No utiliza vectores ni similitud semántica.
+- Se realiza un filtrado directo por valores específicos en el payload (metadatos) de los documentos.
+- Ejemplo: `idioma = "es"` o `categoria = "legal"`.
+
+**¿Cuándo usarla?**
+
+- Para filtrar por propiedades exactas antes de una búsqueda semántica.
+- En sistemas donde ciertos criterios (fecha, idioma, tipo, etc.) son obligatorios.
+- También se puede usar sola, cuando no se requiere inferencia semántica.
+
+**Ventajas**
+
+- Muy eficiente y determinista. Se comporta como una base de datos estructurada tradicional.
+
+#### 3. Búsqueda Exacta con BM25 (BM25 Sparse Text Search)
+
+**¿Qué es?**
+
+Es una técnica de recuperación de información basada en el modelo estadístico **BM25**, el cual calcula la relevancia de los documentos respecto a una consulta textual exacta. Utiliza vectores **dispersos** que representan la presencia y frecuencia de palabras, sin aplicar modelos de lenguaje ni embeddings semánticos.
+
+**¿Cómo funciona?**
+
+- Se tokenizan los textos (documentos y consulta) y se construyen vectores dispersos usando TF-IDF o BM25.
+- BM25 evalúa la relevancia en función de:
+  - Frecuencia de cada término en el documento (TF).
+  - Qué tan informativo es el término en el corpus (IDF).
+  - Longitud del documento (penaliza documentos muy largos).
+- Los documentos se ordenan por su **puntuación BM25** y se devuelven los más relevantes.
+
+**Ventajas**
+
+- Requiere pocos recursos (no necesita modelos preentrenados).
+- Captura con precisión los términos **literalmente coincidentes** que son significativos.
+- Es **rápida y eficaz** para textos cortos o consultas específicas.
+
+**Limitaciones**
+
+- No reconoce sinónimos, intenciones ni contexto semántico.
+- Es sensible a errores ortográficos y variaciones de redacción.
+- Requiere un buen preprocesamiento textual (idioma, stopwords, etc.).
+
+**Casos de uso**
+
+- Consultas con **palabras clave técnicas o exactas** (ej. errores, productos, cláusulas legales).
+- Documentación donde el lenguaje exacto es importante (ej. bases de conocimiento).
+- Complemento a búsquedas semánticas en esquemas híbridos (textual + vectorial).
+
+#### 4. Búsqueda Multi-Stage (Multi-stage Search)
+
+**¿Qué es?**
+
+Es una técnica en la que se encadenan varias etapas de búsqueda o filtrado para **refinar progresivamente** los resultados.
+
+**¿Cómo funciona?**
+
+1. **Etapa 1**: Se aplica una búsqueda o filtro inicial (por ejemplo, una búsqueda exacta o un filtro por metadatos).
+2. **Etapa 2**: Sobre los resultados obtenidos, se realiza una búsqueda vectorial más precisa o costosa.
+3. **Opcionalmente**, se puede agregar una tercera etapa con re-ranking (reordenamiento por algún criterio adicional).
+
+**¿Cuándo usarla?**
+
+- Cuando el volumen de datos es grande y se quiere **acotar primero** por criterios estructurados.
+- Cuando se necesita una **combinación jerárquica de criterios**, como idioma → categoría → semántica.
+
+**Ventajas**
+
+- Reduce el costo computacional de comparar todos los vectores.
+- Permite una búsqueda escalable y precisa.
+
+#### 5. Búsqueda Híbrida (Hybrid Search)
+
+**¿Qué es?**
+
+Combina **búsqueda exacta basada en texto** (BM25, keyword matching) con **búsqueda vectorial semántica**, devolviendo un resultado mixto ordenado por relevancia total.
+
+**¿Cómo funciona?**
+
+- Se ejecutan en paralelo una búsqueda textual exacta y una búsqueda semántica.
+- Se combinan ambas puntuaciones (por ejemplo, con pesos personalizados) para determinar el ranking final de resultados.
+
+**¿Cuándo usarla?**
+
+- Cuando los usuarios mezclan **palabras clave técnicas y lenguaje natural**.
+- En casos donde se requiere precisión con términos específicos (ej. códigos de error, identificadores).
+
+**Ejemplo:**
+
+Buscar “¿cómo funciona la cláusula penal 101-B?” puede beneficiarse de:
+- Coincidencia exacta con “101-B” (keyword)
+- Búsqueda semántica sobre “cómo funciona la cláusula penal”
+
+#### 6.Otros tipos de búsqueda (avanzados)
+
+Qdrant también permite, directamente o mediante integración, implementar búsquedas más avanzadas:
+
+- **Búsqueda personalizada por usuario** (personalización mediante vectores contextuales).
+- **Búsqueda con feedback negativo/positivo** (ej. “parecido a A, pero no como B”).
+- **Re-ranking basado en LLMs** (aplicar un modelo adicional para reordenar).
+- **Búsqueda multimodal** (comparar texto con imágenes, audio, etc.).
+- **Búsqueda por distancia geográfica combinada con semántica** (geo + vectores).
+
+Estos enfoques son ideales para sistemas de recomendación, motores de búsqueda híbridos complejos o entornos de producción avanzados.
+
+
 ## 🛠️ Ejemplo práctico de Qdrant
 
 ### Creación de un entorno de desarrollo
@@ -179,7 +314,6 @@ Este notebook incluye ejemplos de:
 - Recuperación de los puntos/vectores más cercanos.
 - Aplicación de filtros en las búsquedas.
 
-
 #### **4. Código Python que muestra cómo usar un LLM en conjunto con Qdrant**
 
 Si querés ver un ejemplo práctico de cómo implementar RAG (Retrieval-Augmented Generation) utilizando OpenAI o Gemini y una base de conocimiento local, podés consultar el archivo [`llm_api_examples_gemini_openai`](./notebook/llm_api_examples_gemini_openai.ipynb)
@@ -201,7 +335,10 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [Estrellas en el cielo semántico: búsqueda vectorial con Qdrant](https://medium.com/@j92riquelme/estrellas-en-el-cielo-semántico-búsqueda-vectorial-con-qdrant-89072b49f418)
 * [An Introduction to Vector Databases](https://qdrant.tech/articles/what-is-a-vector-database/)
 * [Build Your First Semantic Search Engine](https://qdrant.tech/documentation/beginner-tutorials/search-beginners/)
+* [Búsqueda vectorial: organización de datos, modelos de incrustación y similitud semántica](https://medium.com/@j92riquelme/búsqueda-vectorial-organización-de-datos-modelos-de-incrustación-y-similitud-semántica-75954ec9b6aa)
 * [A Complete Guide to Filtering in Vector Search](https://qdrant.tech/articles/vector-search-filtering/)
+
+* [Hybrid Search Revamped - Building with Qdrant's Query API](https://qdrant.tech/articles/hybrid-search/)
 
 
 ## ▶️ Videos recomendados
@@ -213,6 +350,7 @@ Selección de videos para reforzar visualmente los temas abordados
 * [Getting Started with Qdrant](https://youtu.be/LRcZ9pbGnno?si=0xPf3C9oGpR6BxRz)
 * [Chatbot with RAG, using LangChain, OpenAI, and Groq](https://www.youtube.com/watch?v=O60-KuZZeQA)
 * [Music Recommendation System with Qdrant Vector Search and Audio Embeddings](https://www.youtube.com/watch?v=id5ql-Abq4Y)
+* [How to Build the Ultimate Hybrid Search with Qdrant](https://www.youtube.com/watch?v=LAZOxqzceEU)
 
 
 ## 📚 Cursos adicionales recomendados
