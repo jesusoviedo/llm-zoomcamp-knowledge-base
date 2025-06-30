@@ -314,6 +314,16 @@ Este notebook incluye ejemplos de:
 - Recuperación de los puntos/vectores más cercanos.
 - Aplicación de filtros en las búsquedas.
 
+#### **4. Generación de incrustaciones (embeddings) con FastEmbed**
+
+Si deseas ver un ejemplo práctico de cómo generar incrustaciones de texto utilizando la librería `FastEmbed`, puedes consultar el archivo [`1_fastembed_embeddings`](./notebook/1_fastembed_embeddings.ipynb).
+
+Este notebook incluye ejemplos de:
+- Instalación y carga del modelo de incrustación (`BAAI/bge-small-en-v1.5`, entre otros).
+- Transformación de textos en vectores numéricos (embeddings).
+- Visualización de las incrustaciones generadas.
+- Preparación de los vectores para su posterior indexación en una colección de Qdrant.
+
 #### **4. Código Python que muestra cómo usar un LLM en conjunto con Qdrant**
 
 Si querés ver un ejemplo práctico de cómo implementar RAG (Retrieval-Augmented Generation) utilizando OpenAI o Gemini y una base de conocimiento local, podés consultar el archivo [`llm_api_examples_gemini_openai`](./notebook/llm_api_examples_gemini_openai.ipynb)
@@ -328,6 +338,7 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [What is Qdrant?](https://qdrant.tech/documentation/overview/)
 * [How Does Vector Search Work in Qdrant?](https://qdrant.tech/documentation/overview/vector-search/)
 * [How to Get Started with Qdrant Locally](https://qdrant.tech/documentation/quickstart/)
+* [Built for Vector Search](https://qdrant.tech/articles/dedicated-vector-search/)
 * [Qdrant Web UI](https://qdrant.tech/documentation/web-ui/)
 * [How to Generate Text Embedings with FastEmbed](https://qdrant.tech/documentation/fastembed/fastembed-quickstart/)
 * [Using FastEmbed with Qdrant for Vector Search](https://qdrant.tech/documentation/fastembed/fastembed-semantic-search/)
