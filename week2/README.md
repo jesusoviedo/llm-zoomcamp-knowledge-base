@@ -280,7 +280,7 @@ uv venv && uv sync
 
 Este comando creará un entorno virtual en el directorio del proyecto y sincronizará las librerías especificadas en el archivo `pyproject.toml`.
 
-### Interactuando con Qdrant usando Python**
+### Interactuando con Qdrant usando Python
 
 #### **1. Descargar la imagen de Qdrant desde Docker Hub**
 
@@ -324,14 +324,37 @@ Este notebook incluye ejemplos de:
 - Visualización de las incrustaciones generadas.
 - Preparación de los vectores para su posterior indexación en una colección de Qdrant.
 
-#### **4. Código Python que muestra cómo usar un LLM en conjunto con Qdrant**
+#### **5. Búsqueda semántica con Qdrant**
 
-Si querés ver un ejemplo práctico de cómo implementar RAG (Retrieval-Augmented Generation) utilizando OpenAI o Gemini y una base de conocimiento local, podés consultar el archivo [`llm_api_examples_gemini_openai`](./notebook/llm_api_examples_gemini_openai.ipynb)
+Si deseas ver un ejemplo práctico de cómo realizar una búsqueda semántica utilizando Qdrant, puedes consultar el archivo [`2_sematic_search.ipynb`](./notebook/2_sematic_search.ipynb).
 
-Este notebook incluye ejemplos de cómo:
-- Hacer una consulta simple a un modelo LLM (como GPT o Gemini).
-- Conectar ese modelo a una fuente externa de datos (como un documento o colección de texto).
-- Combinar recuperación de información y generación de texto para responder preguntas con base en conocimiento personalizado.
+Este notebook incluye ejemplos de:
+- Creación de una colección en Qdrant para búsqueda semántica.
+- Inserción de vectores densos generados previamente.
+- Ejecución de búsquedas basadas en similitud semántica.
+- Interpretación de los resultados obtenidos en consultas de lenguaje natural.
+
+#### **6. Construcción de un sistema RAG con Qdrant**
+
+Si deseas ver cómo construir un sistema RAG (Retrieval-Augmented Generation) básico, puedes consultar el archivo [`3_rag_and_qdrant.ipynb`](./notebook/3_rag_and_qdrant.ipynb).
+
+Este notebook incluye ejemplos de:
+- Indexación de documentos con metadatos relevantes.
+- Implementación de un flujo de recuperación y generación con OpenAI.
+- Uso de Qdrant como backend para la recuperación semántica.
+- Generación de respuestas fundamentadas en los documentos cargados.
+
+
+#### **7. Búsqueda híbrida: combinación de vectores densos y dispersos**
+
+Si deseas ver cómo realizar una búsqueda híbrida combinando embeddings densos y vectores dispersos (como BM25), puedes consultar el archivo [`4_hybrid_search.ipynb`](./notebook/4_hybrid_search.ipynb).
+
+Este notebook incluye ejemplos de:
+- Configuración de una colección híbrida en Qdrant.
+- Inserción de puntos con vectores densos y texto para vectorización dispersa.
+- Ejecución de búsquedas híbridas con fusión de puntuaciones.
+- Comparación entre resultados semánticos, léxicos e híbridos.
+
 
 ## 🔗 Lectura recomendada
 Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
@@ -343,14 +366,17 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [How to Generate Text Embedings with FastEmbed](https://qdrant.tech/documentation/fastembed/fastembed-quickstart/)
 * [Using FastEmbed with Qdrant for Vector Search](https://qdrant.tech/documentation/fastembed/fastembed-semantic-search/)
 * [Qdrant - Concepts](https://qdrant.tech/documentation/concepts/)
-* [Estrellas en el cielo semántico: búsqueda vectorial con Qdrant](https://medium.com/@j92riquelme/estrellas-en-el-cielo-semántico-búsqueda-vectorial-con-qdrant-89072b49f418)
 * [An Introduction to Vector Databases](https://qdrant.tech/articles/what-is-a-vector-database/)
 * [Build Your First Semantic Search Engine](https://qdrant.tech/documentation/beginner-tutorials/search-beginners/)
-* [Búsqueda vectorial: organización de datos, modelos de incrustación y similitud semántica](https://medium.com/@j92riquelme/búsqueda-vectorial-organización-de-datos-modelos-de-incrustación-y-similitud-semántica-75954ec9b6aa)
 * [A Complete Guide to Filtering in Vector Search](https://qdrant.tech/articles/vector-search-filtering/)
-
 * [Hybrid Search Revamped - Building with Qdrant's Query API](https://qdrant.tech/articles/hybrid-search/)
-
+* [Estrellas en el cielo semántico: búsqueda vectorial con Qdrant](https://medium.com/@j92riquelme/estrellas-en-el-cielo-semántico-búsqueda-vectorial-con-qdrant-89072b49f418)
+* [Búsqueda vectorial: organización de datos, modelos de incrustación y similitud semántica](https://medium.com/@j92riquelme/búsqueda-vectorial-organización-de-datos-modelos-de-incrustación-y-similitud-semántica-75954ec9b6aa)
+* [Mapeando el Universo Semántico con Qdrant: De Vectores a Visualización](https://medium.com/@j92riquelme/mapeando-el-universo-semántico-con-qdrant-de-vectores-a-visualización-9dcfa078a21a)
+* [Navegando el Espacio Semántico: Una Guía Técnica para Búsquedas de Similitud y Filtrado con Qdrant](https://medium.com/@j92riquelme/navegando-el-espacio-semántico-una-guía-técnica-para-búsquedas-de-similitud-y-filtrado-con-qdrant-75d1b82cc1e2)
+* [Dominando la Búsqueda Híbrida: Una Guía Técnica Profunda sobre Qdrant, Vectores Dispersos y Fusión de Relevancia](https://medium.com/@j92riquelme/dominando-la-busqueda-hibrida-qdrant-vectores-dispersos-y-fusion-f8e82d5afb06)
+* [Construyendo un Sistema RAG con Qdrant](https://medium.com/@j92riquelme/construyendo-un-sistema-rag-con-qdrant-a551390b8f30)
+* [Del RAG clásico a la búsqueda híbrida con Qdrant](https://medium.com/@j92riquelme/del-rag-clasico-a-la-busqueda-hibrida-con-qdrant-5b8f67a39e86)
 
 ## ▶️ Videos recomendados
 Selección de videos para reforzar visualmente los temas abordados
