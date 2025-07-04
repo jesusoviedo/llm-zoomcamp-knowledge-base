@@ -9,5 +9,6 @@ dependencies = [
     "ipywidgets>=8.1.7",
     "notebook>=7.4.3",
     "openai>=1.93.0",
+    "pandas>=2.3.0",
     "qdrant-client>=1.14.3",
 ]

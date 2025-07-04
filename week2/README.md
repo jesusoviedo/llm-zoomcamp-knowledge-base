@@ -344,7 +344,6 @@ Este notebook incluye ejemplos de:
 - Uso de Qdrant como backend para la recuperación semántica.
 - Generación de respuestas fundamentadas en los documentos cargados.
 
-
 #### **7. Búsqueda híbrida: combinación de vectores densos y dispersos**
 
 Si deseas ver cómo realizar una búsqueda híbrida combinando embeddings densos y vectores dispersos (como BM25), puedes consultar el archivo [`4_hybrid_search.ipynb`](./notebook/4_hybrid_search.ipynb).
@@ -355,6 +354,14 @@ Este notebook incluye ejemplos de:
 - Ejecución de búsquedas híbridas con fusión de puntuaciones.
 - Comparación entre resultados semánticos, léxicos e híbridos.
 
+#### **8. Sistema RAG híbrido: recuperación y generación con Qdrant y OpenAI**
+Si deseas ver un ejemplo práctico de cómo construir un sistema RAG (Retrieval-Augmented Generation) que combine búsqueda híbrida y generación de lenguaje, puedes consultar el archivo [`5_rag_and_qdrant-hybrid_search.ipynb`](./notebook/5_rag_and_qdrant-hybrid_search.ipynb).
+
+Este notebook incluye ejemplos de:
+- Preparación de una colección híbrida con Qdrant a partir de un dataset de películas.
+- Ejecución de búsquedas híbridas usando fusión RRF con vectores densos y dispersos.
+- Construcción dinámica de prompts con resultados recuperados.
+- Generación de respuestas en lenguaje natural usando un modelo de OpenAI.
 
 ## 🔗 Lectura recomendada
 Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
@@ -370,6 +377,8 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [Build Your First Semantic Search Engine](https://qdrant.tech/documentation/beginner-tutorials/search-beginners/)
 * [A Complete Guide to Filtering in Vector Search](https://qdrant.tech/articles/vector-search-filtering/)
 * [Hybrid Search Revamped - Building with Qdrant's Query API](https://qdrant.tech/articles/hybrid-search/)
+* [5 Minute RAG with Qdrant and DeepSeek](https://qdrant.tech/documentation/rag-deepseek/)
+* [Agentic RAG With CrewAI & Qdrant Vector Database](https://qdrant.tech/documentation/agentic-rag-crewai-zoom/)
 * [Estrellas en el cielo semántico: búsqueda vectorial con Qdrant](https://medium.com/@j92riquelme/estrellas-en-el-cielo-semántico-búsqueda-vectorial-con-qdrant-89072b49f418)
 * [Búsqueda vectorial: organización de datos, modelos de incrustación y similitud semántica](https://medium.com/@j92riquelme/búsqueda-vectorial-organización-de-datos-modelos-de-incrustación-y-similitud-semántica-75954ec9b6aa)
 * [Mapeando el Universo Semántico con Qdrant: De Vectores a Visualización](https://medium.com/@j92riquelme/mapeando-el-universo-semántico-con-qdrant-de-vectores-a-visualización-9dcfa078a21a)
