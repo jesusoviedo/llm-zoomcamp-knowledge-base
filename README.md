@@ -4,12 +4,13 @@ Este repositorio centraliza mis apuntes y recursos adicionales del **LLM Zoomcam
 
 ## 📚 Contenido por semana
 
-| Semana   | Contenido                             |
-| -------- | ------------------------------------- |
-| Semana 1 | [Introducción a LLMs y RAG](./week1/) |
-| Semana 2 | [Búsqueda de vectores](./week2/) |
+| Semana   | Contenido                                                          |
+| -------- | -------------------------------------------------------------------|
+| Semana 1 | [Introducción a LLMs y RAG](./week1/)                              |
+| Semana 2 | [Búsqueda de vectores](./week2/)                                   |
+| Semana 3 | [ [De REST al razonamiento con DLT y Cognee]](./workshop1/)        |
 
-*Cada carpeta `weekX/` incluye un README con apuntes detallados, código de ejemplo y enlaces extra.*
+*Cada carpeta `weekX/` o `workshopX/` incluye un README con apuntes detallados, código de ejemplo y enlaces extra.*
 
 ## ✅ Tareas por semana
 
@@ -17,8 +18,9 @@ Este repositorio centraliza mis apuntes y recursos adicionales del **LLM Zoomcam
 | -------- | ------------------------------------ |
 | Semana 1 | [Tarea Semana 1](./homework1/)       |
 | Semana 2 | [Tarea Semana 2](./homework2/)       |
+| Semana 3 | [Tarea Workshop 1](./hw_workshop1/)   |
 
-*En las carpetas `homeworkX/` vas a encontrar desafíos prácticos para reforzar lo aprendido en cada semana.*
+*En las carpetas `homeworkX/` o `hw_workshopX/` vas a encontrar desafíos prácticos para reforzar lo aprendido en cada semana.*
 
 ---
 
