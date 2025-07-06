@@ -185,6 +185,11 @@ week2/datos
 # Homework 2
 homework2/qdrant_storage
 
+# Workshop 1
+
+# Homework Workshop 1
+workshop1/notebook/db.qdrant
+
 # Week 3
 week3/notebook/doc
 
