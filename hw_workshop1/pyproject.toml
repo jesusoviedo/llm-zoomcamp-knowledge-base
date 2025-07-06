@@ -1,0 +1,11 @@
+[project]
+name = "hw-workshop1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dlt[qdrant]>=1.12.3",
+    "notebook>=7.4.4",
+    "qdrant-client[fastembed]>=1.14.3",
+]
