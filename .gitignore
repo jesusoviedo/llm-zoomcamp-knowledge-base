@@ -186,10 +186,14 @@ week2/datos
 homework2/qdrant_storage
 
 # Workshop 1
+notebook/data
+notebook/kuzu_db
 
 # Homework Workshop 1
 hw_workshop1/notebook/db.qdrant
 hw_workshop1/notebook/.dlt
+hw_workshop1/notebook/data
+hw_workshop1/notebook/kuzu_db
 
 # Week 3
 week3/notebook/doc
