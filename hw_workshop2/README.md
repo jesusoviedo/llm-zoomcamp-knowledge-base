@@ -6,8 +6,6 @@ Este ejercicio práctico corresponde al Workshop 2 del [LLM Zoomcamp](https://gi
 - Cómo definir funciones para ser usadas por agentes mediante `function calling`.
 - Cómo levantar un servidor MCP con `FastMCP`.
 - Cómo comunicarte con un servidor MCP a través de comandos JSON-RPC.
-- Cómo integrar herramientas externas en un flujo conversacional.
-- Cómo usar agentes para tomar decisiones y ejecutar funciones basadas en entradas del usuario.
 
 🔗 [Ver enunciado original del Homework Workshop 2](https://github.com/DataTalksClub/llm-zoomcamp/blob/main/cohorts/2025/0a-agents/homework.md)
 
@@ -43,7 +41,7 @@ jupyter notebook &
 ```
 
 ### 📝 Desarrollo y solución
-Descarga el archivo **[hw_workshop2_answers.ipynb](./notebook/hw_workshop2_answers.ipynb)** en la carpeta de notebooks para revisar los detalles de la solución de la tarea
+Descarga los archivos **[hw_workshop2_answers.ipynb](./notebook/hw_workshop2_answers.ipynb)** y **[weather_server.py](./notebook/weather_server.py)** en la carpeta de notebooks para revisar los detalles de la solución de la tarea.
 
 ### 🛠️ Comandos útiles
 
