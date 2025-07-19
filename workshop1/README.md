@@ -223,7 +223,7 @@ Neo4j es una base de datos gráfica **nativa, madura y empresarial**, orientada 
 
 
 
-## 🛠️ Ejemplo práctico de Qdrant
+## 🛠️ Ejemplo práctico de Kùzu, Neo4j, Cognee y DLT
 
 ### Creación de un entorno de desarrollo
 
@@ -241,88 +241,57 @@ uv venv && uv sync
 
 Este comando creará un entorno virtual en el directorio del proyecto y sincronizará las librerías especificadas en el archivo `pyproject.toml`.
 
-### Interactuando con Qdrant usando Python
+### Ejemplos de uso de grafos y sistemas cognitivos
 
-#### **1. Descargar la imagen de Qdrant desde Docker Hub**
+A continuación, se presentan notebooks que exploran el uso de diferentes bases de datos de grafos y sistemas cognitivos aplicados a tareas de análisis y representación de conocimiento.
 
-```bash
-docker pull qdrant/qdrant
-```
 
-#### **2. Ejecutar el servicio**
+#### **1. Uso de Kùzu para consultas con grafos**
 
-```bash
-docker run -p 6333:6333 -p 6334:6334 \
-    -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
-    qdrant/qdrant
-```
-
-Con esta configuración predeterminada, todos los datos se almacenarán en el directorio  `./qdrant_storage`, el cual será accesible tanto para el contenedor como para el host.
-
-Qdrant ahora estará disponible en:
-- API REST: http://localhost:6333
-- Interfaz web: http://localhost:6333/dashboard
-- API gRPC: http://localhost:6334
-
-#### **3. Flujo básico**
-
-Si deseas ver un ejemplo práctico de cómo crear una colección, agregar elementos y realizar una consulta, puedes consultar el archivo [`0_quickstart`](./notebook/0_quickstart.ipynb).
+Si deseas ver cómo utilizar la base de datos de grafos **Kùzu** para realizar consultas sobre relaciones complejas, puedes consultar el archivo [`using_kuzu.ipynb`](./notebook/using_kuzu.ipynb).
 
 Este notebook incluye ejemplos de:
-- Creación de un cliente.
-- Creación de una colección.
-- Inserción de puntos/vectores en una colección.
-- Recuperación de los puntos/vectores más cercanos.
-- Aplicación de filtros en las búsquedas.
+- Instalación y configuración de Kùzu.
+- Creación de nodos y relaciones.
+- Ejecución de consultas en lenguaje Cypher.
 
-#### **4. Generación de incrustaciones (embeddings) con FastEmbed**
+#### **2. Uso de Neo4j para modelado de grafos**
 
-Si deseas ver un ejemplo práctico de cómo generar incrustaciones de texto utilizando la librería `FastEmbed`, puedes consultar el archivo [`1_fastembed_embeddings`](./notebook/1_fastembed_embeddings.ipynb).
+Para aprender a trabajar con **Neo4j**, una base de datos de grafos ampliamente utilizada en producción, revisa el archivo [`using_neo4j.ipynb`](./notebook/using_neo4j.ipynb).
 
 Este notebook incluye ejemplos de:
-- Instalación y carga del modelo de incrustación (`BAAI/bge-small-en-v1.5`, entre otros).
-- Transformación de textos en vectores numéricos (embeddings).
-- Visualización de las incrustaciones generadas.
-- Preparación de los vectores para su posterior indexación en una colección de Qdrant.
+- Conexión a una instancia local de Neo4j.
+- Inserción de datos con Cypher.
+- Ejecución de consultas para analizar relaciones.
 
-#### **5. Búsqueda semántica con Qdrant**
+#### **3. Uso de Cognee como sistema cognitivo basado en grafos**
 
-Si deseas ver un ejemplo práctico de cómo realizar una búsqueda semántica utilizando Qdrant, puedes consultar el archivo [`2_sematic_search.ipynb`](./notebook/2_sematic_search.ipynb).
-
-Este notebook incluye ejemplos de:
-- Creación de una colección en Qdrant para búsqueda semántica.
-- Inserción de vectores densos generados previamente.
-- Ejecución de búsquedas basadas en similitud semántica.
-- Interpretación de los resultados obtenidos en consultas de lenguaje natural.
-
-#### **6. Construcción de un sistema RAG con Qdrant**
-
-Si deseas ver cómo construir un sistema RAG (Retrieval-Augmented Generation) básico, puedes consultar el archivo [`3_rag_and_qdrant.ipynb`](./notebook/3_rag_and_qdrant.ipynb).
+Si deseas explorar cómo **Cognee** utiliza memoria estructurada y grafos para potenciar la inteligencia artificial, puedes revisar el archivo [`using_cognee.ipynb`](./notebook/using_cognee.ipynb).
 
 Este notebook incluye ejemplos de:
-- Indexación de documentos con metadatos relevantes.
-- Implementación de un flujo de recuperación y generación con OpenAI.
-- Uso de Qdrant como backend para la recuperación semántica.
-- Generación de respuestas fundamentadas en los documentos cargados.
+- Inicialización y configuración de Cognee.
+- Inserción de conocimiento en el grafo cognitivo.
+- Consultas y navegación por el grafo.
+- Integración con embeddings y herramientas externas.
 
-#### **7. Búsqueda híbrida: combinación de vectores densos y dispersos**
+#### **4. Integración de DLT, Cognee y Kùzu con un dataset real**
 
-Si deseas ver cómo realizar una búsqueda híbrida combinando embeddings densos y vectores dispersos (como BM25), puedes consultar el archivo [`4_hybrid_search.ipynb`](./notebook/4_hybrid_search.ipynb).
-
-Este notebook incluye ejemplos de:
-- Configuración de una colección híbrida en Qdrant.
-- Inserción de puntos con vectores densos y texto para vectorización dispersa.
-- Ejecución de búsquedas híbridas con fusión de puntuaciones.
-- Comparación entre resultados semánticos, léxicos e híbridos.
-
-#### **8. Sistema RAG híbrido: recuperación y generación con Qdrant y OpenAI**
-Si deseas ver un ejemplo práctico de cómo construir un sistema RAG (Retrieval-Augmented Generation) que combine búsqueda híbrida y generación de lenguaje, puedes consultar el archivo [`5_rag_and_qdrant-hybrid_search.ipynb`](./notebook/5_rag_and_qdrant-hybrid_search.ipynb).
+Para ver una integración práctica entre **DLT**, **Cognee** y **Kùzu**, puedes consultar el archivo [`dlt_and_cognee_taxi_dataset.ipynb`](./notebook/dlt_and_cognee_taxi_dataset.ipynb).
 
 Este notebook incluye ejemplos de:
-- Preparación de una colección híbrida con Qdrant a partir de un dataset de películas.
-- Ejecución de búsquedas híbridas usando fusión RRF con vectores densos y dispersos.
-- Construcción dinámica de prompts con resultados recuperados.
-- Generación de respuestas en lenguaje natural usando un modelo de OpenAI.
+- Extracción y transformación de datos con DLT.
+- Ingesta del dataset de taxis en un grafo usando Kùzu.
+- Enriquecimiento del conocimiento con Cognee.
+- Análisis y consultas cognitivas sobre datos reales
+
+#### **5. Análisis constitucional con Cognee**
+
+Puedes consultar el archivo [`understanding_paraguays_constitution_with_cognee.ipynb`](./notebook/understanding_paraguays_constitution_with_cognee.ipynb), que muestra cómo utilizar **Cognee** para:
+
+- Descargar y procesar el texto completo de la Constitución Nacional del Paraguay.
+- Generar un grafo de conocimiento con entidades y relaciones extraídas del documento.
+- Realizar búsquedas semánticas y consultas cognitivas sobre el contenido constitucional.
+- Visualizar las conexiones clave entre conceptos jurídicos utilizando herramientas de grafo.
 
 ## 🔗 Lectura recomendada
 Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
@@ -333,37 +302,38 @@ Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 * [dlt - Qdrant destination](https://dlthub.com/docs/dlt-ecosystem/destinations/qdrant)
 * [dlt - Code examples](https://dlthub.com/docs/examples)
 * [dlt - Using dlt](https://dlthub.com/docs/general-usage)
-
 * [Cognee - Quickstart](https://docs.cognee.ai/quickstart)
 * [Cognee - Hello cognee SDK](https://docs.cognee.ai/tutorials/hello-cognee)
 * [Cognee - Core Concepts](https://docs.cognee.ai/core-concepts)
 * [Cognee - How-to Guides](https://docs.cognee.ai/how-to-guides)
 * [Cognee - Colab Notebooks](https://docs.cognee.ai/reference/colab-notebooks)
 * [Cognee - Cognee UI](https://docs.cognee.ai/how-to-guides/cognee-ui)
-
 * [Kuzu - Documentation](https://docs.kuzudb.com/)
 * [Kuzu - Create your first graph](https://docs.kuzudb.com/get-started/)
 * [Kuzu - Python Tutorial: Analyze a Social Network](https://docs.kuzudb.com/tutorials/python/)
 * [Kuzu - Python API](https://docs.kuzudb.com/client-apis/python/)
 * [Kuzu - Import data](https://docs.kuzudb.com/import/)
-
 * [Cypher - Tutorial](https://docs.kuzudb.com/tutorials/cypher/)
 * [Cypher - Manual](https://docs.kuzudb.com/cypher/)
 * [Cypher - Run prepared Cypher statements](https://docs.kuzudb.com/get-started/prepared-statements/)
 * [Cypher - What is Cypher](https://neo4j.com/docs/getting-started/cypher/)
 * [Cypher - Cheat Sheet](https://neo4j.com/docs/cypher-cheat-sheet/5/all/)
-
 * [Neo4j - What is Neo4j?](https://neo4j.com/docs/getting-started/whats-neo4j/)
 * [Neo4j - What is a graph database](https://neo4j.com/docs/getting-started/graph-database/)
 * [Neo4j - Graph database concepts](https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/)
 * [Neo4j - Build applications with Neo4j and Python](https://neo4j.com/docs/python-manual/current/)
 * [Neo4j - Neo4j Movies Application](https://github.com/neo4j-examples/movies-python-bolt)
 * [Neo4j - The Neo4j Graph Data Science Library Manualxt](https://neo4j.com/docs/graph-data-science/current/)
-
+* [Neo4j - Example datasets](https://neo4j.com/docs/getting-started/appendix/example-data/)
+* [Neo4j - Neo4j Tutorial: Using And Querying Graph Databases in Python](https://www.datacamp.com/tutorial/neo4j-tutorial)
+* [De la Ingesta de Datos a la Inferencia Cognitiva: Una Arquitectura Moderna con dlt, RAG, Cognee y Bases de Datos Gráficas](https://medium.com/@j92riquelme/de-la-ingesta-de-datos-a-la-inferencia-cognitiva-una-arquitectura-moderna-con-dlt-rag-cognee-e18fdd6e94f8)
+* [Dominando Cognee: Estructuración de Conocimiento con Pipelines, Ontologías y el SDK](https://medium.com/@j92riquelme/dominando-cognee-estructuracion-de-conocimiento-con-pipelines-ontologias-y-el-sdk-4ae15fdddb1b)
+* [¿Puede una IA entender la Constitución del Paraguay? Mi experiencia con Cognee](https://medium.com/@j92riquelme/puede-una-ia-entender-la-constitucion-del-paraguay-mi-experiencia-con-dlt-y-cognee-6715f5708b83)
 
 
 ## ▶️ Videos recomendados
 Selección de videos para reforzar visualmente los temas abordados
+
 * [What Is A Graph Database? Common features of graph DBMSs.](https://www.youtube.com/watch?v=BksVyv5864k)
 * [Cognee GraphRAG + Visualization](https://www.youtube.com/watch?v=1bezuvLwJmw)
 * [Host Your Own Local LLM with Ollama & cognee](https://www.youtube.com/watch?v=aZYRo-eXDzA)
@@ -379,6 +349,7 @@ Recursos complementarios para seguir aprendiendo y fortaleciendo tus habilidades
 * [Neo4j & GenerativeAI Fundamentals](https://graphacademy.neo4j.com/courses/genai-fundamentals/?category=development)
 * [Using Neo4j with Python](https://graphacademy.neo4j.com/courses/drivers-python/?category=development)
 * [Build a Neo4j-backed Chatbot using Python](https://graphacademy.neo4j.com/courses/llm-chatbot-python/?category=development)
+* [Neo4j Course for Beginners](https://www.youtube.com/watch?v=_IgbB24scLI)
 
 ---
 
