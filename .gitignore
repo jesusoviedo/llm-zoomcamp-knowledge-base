@@ -195,7 +195,11 @@ hw_workshop1/notebook/db.qdrant
 hw_workshop1/notebook/.dlt
 
 # Week 3
-week3/notebook/doc
+week3/notebook/data
+
+# Homework 3
+homework3/qdrant_storage
+homework3/notebook/data
 
 # Week 4
 week4/notebook/doc
