@@ -1,0 +1,13 @@
+[project]
+name = "homework3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipywidgets>=8.1.7",
+    "minsearch>=0.0.4",
+    "notebook>=7.4.4",
+    "qdrant-client>=1.15.0",
+    "tqdm>=4.67.1",
+]
