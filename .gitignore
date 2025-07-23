@@ -193,6 +193,7 @@ workshop1/notebook/pdf
 # Homework Workshop 1
 hw_workshop1/notebook/db.qdrant
 hw_workshop1/notebook/.dlt
+hw_workshop1/notebook/zoomcamp_pipeline.duckdb
 
 # Week 3
 week3/notebook/data

@@ -1,12 +1,6 @@
 ## 📘 Homework 3 - Evaluación de Búsqueda
 
-Este ejercicio práctico corresponde a la quinta semana del [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp). 
-
-
-=======================
-El objetivo es construir un sistema básico de preguntas y respuestas (Q&A) usando los documentos FAQ del curso Machine Learning Zoomcamp, aplicando técnicas modernas de búsqueda semántica. En este ejercicio práctico exploraremos cómo transformar preguntas en vectores utilizando modelos de embeddings y cómo encontrar respuestas relevantes mediante búsqueda por similitud. Todo esto se logrará con herramientas como `Qdrant` y `FastEmbed`.
-=======================
-
+Este ejercicio práctico corresponde a la quinta semana del [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp).El objetivo es construir un sistema básico de preguntas y respuestas (Q&A) usando los documentos FAQ del curso LLM Zoomcamp, aplicando técnicas modernas de evaluación en búsqueda semántica. En este ejercicio práctico analizamos el rendimiento de búsquedas vectoriales con `minsearch` y `Qdrant`, midiendo métricas como `Hit Rate` y `MRR`. También comparamos respuestas generadas por un LLM con respuestas reales usando `cosine similarity` y `ROUGE`, evaluando así la calidad global del sistema.
 
 🔗 [Ver enunciado original del Homework 3](https://github.com/DataTalksClub/llm-zoomcamp/blob/main/cohorts/2025/03-evaluation/homework.md)
 
