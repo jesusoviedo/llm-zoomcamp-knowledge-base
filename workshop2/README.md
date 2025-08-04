@@ -103,7 +103,7 @@ uv venv && uv sync
 
 Este comando creará un entorno virtual en el directorio del proyecto y sincronizará las librerías especificadas en el archivo `pyproject.toml`.
 
-### Ejemplos de uso de grafos y sistemas cognitivos
+### Ejemplos prácticos de agentes y técnicas avanzadas con LLMs
 
 #### **1. Uso de Agentic RAG para respuestas enriquecidas**
 
