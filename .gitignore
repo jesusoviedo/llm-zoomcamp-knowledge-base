@@ -173,6 +173,8 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# learning public resources
+learning_public
 
 # Week 1
 week1/notebook/doc
@@ -204,3 +206,4 @@ homework3/notebook/data
 
 # Week 4
 week4/notebook/doc
+
