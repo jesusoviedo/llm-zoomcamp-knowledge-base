@@ -10,6 +10,7 @@ dependencies = [
     "minsearch>=0.0.4",
     "notebook>=7.4.4",
     "openai>=1.97.0",
+    "pydantic-ai>=0.5.0",
     "python-dotenv>=1.1.1",
     "requests>=2.32.4",
 ]

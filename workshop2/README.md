@@ -121,6 +121,11 @@ Puedes ver cómo utilizar **Function Calling** con modelos de OpenAI para que un
 
 Para explorar cómo **PydanticAI** permite controlar y validar las salidas generadas por LLMs mediante modelos de datos, consulta el archivo [`using_pydanticai.ipynb`](./notebook/using_pydanticai.ipynb).
 
+#### **5. Explorando clases y utilidades en Chat Assistant**
+
+Si quieres aprender cómo está estructurado un asistente de chat que integra funciones como herramientas, maneja la interacción con modelos de OpenAI y presenta resultados en entornos como Jupyter Notebook, revisa el archivo [`understanding_chat_assistant.ipynb`](./notebook/understanding_chat_assistant.ipynb).
+
+
 ## 🔗 Lectura recomendada
 Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 
