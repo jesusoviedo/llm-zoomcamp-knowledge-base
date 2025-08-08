@@ -129,27 +129,30 @@ Si quieres aprender cómo está estructurado un asistente de chat que integra fu
 ## 🔗 Lectura recomendada
 Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
 
-* [La Revolución Agéntica: de modelos reactivos a ecosistemas de IA autónomos](https://medium.com/@j92riquelme/la-revolucion-agentica-6c055c8fe405)
-* [ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners)
-* [LLM Agents](https://www.promptingguide.ai/research/llm-agents)
-* [Function Calling with LLMs](https://www.promptingguide.ai/applications/function_calling)
-* [How LLMs Use Tools: A Step-by-Step Guide to Controlled AI Agents](https://medium.com/superdatascience/how-llms-use-tools-a-step-by-step-guide-to-controlled-ai-agents-dbc44ac4b785)
-* [Get started with the Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction)
-* [Model Context Protocol (MCP) an overview](https://www.philschmid.de/mcp-introduction?source=post_page-----7dee927e7223---------------------------------------#why-is-there-so-much-hype-did-mcp-win)
-* [Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)
-* [What is Agentic Search?](https://swirlaiconnect.com/blog/what-is-agentic-search)
-* [What Is Agentic Search? Breaking Down the Concept and Definition](https://ninepeaks.io/what-is-agentic-search#:~:text=Agentic%20search%20systems%20work%20independently,process%2C%20and%20visualize%20operational%20data)
-* [Agentic Search in Action: A Practical Guide to Building from Scratch](https://medium.com/google-cloud/agentic-search-in-action-a-practical-guide-to-building-from-scratch-e100422f27b2)
-* [What is agentic RAG?](https://www.ibm.com/think/topics/agentic-rag#763338456)
-* [What is Agentic RAG](https://weaviate.io/blog/what-is-agentic-rag)
-* [An introduction to function calling and tool use](https://www.apideck.com/blog/llm-tool-use-and-function-calling)
-* [tool-calling-guide](https://github.com/ALucek/tool-calling-guide)
-* [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners)
-* [Function calling](https://platform.openai.com/docs/guides/function-calling?api-mode=responses)
-* [Brave Search API](https://brave.com/search/api/tools/)
-* [Google Search API](https://serpapi.com/)
-* [Dify](https://dify.ai)
-* [PydanticAI](https://ai.pydantic.dev/)
+* [La Revolución Agéntica: de modelos reactivos a ecosistemas de IA autónomos](https://medium.com/@j92riquelme/la-revolucion-agentica-6c055c8fe405)  
+* [ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners)  
+* [LLM Agents](https://www.promptingguide.ai/research/llm-agents)  
+* [What is agentic RAG?](https://www.ibm.com/think/topics/agentic-rag#763338456)  
+* [What is Agentic RAG](https://weaviate.io/blog/what-is-agentic-rag)  
+* [What is Agentic Search?](https://swirlaiconnect.com/blog/what-is-agentic-search)  
+* [What Is Agentic Search? Breaking Down the Concept and Definition](https://ninepeaks.io/what-is-agentic-search#:~:text=Agentic%20search%20systems%20work%20independently,process%2C%20and%20visualize%20operational%20data)  
+* [Agentic Search in Action: A Practical Guide to Building from Scratch](https://medium.com/google-cloud/agentic-search-in-action-a-practical-guide-to-building-from-scratch-e100422f27b2)  
+* [An introduction to function calling and tool use](https://www.apideck.com/blog/llm-tool-use-and-function-calling)  
+* [Function Calling with LLMs](https://www.promptingguide.ai/applications/function_calling)  
+* [Function calling](https://platform.openai.com/docs/guides/function-calling?api-mode=responses)  
+* [tool-calling-guide](https://github.com/ALucek/tool-calling-guide)  
+* [How LLMs Use Tools: A Step-by-Step Guide to Controlled AI Agents](https://medium.com/superdatascience/how-llms-use-tools-a-step-by-step-guide-to-controlled-ai-agents-dbc44ac4b785)  
+* [Get started with the Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction)  
+* [Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)  
+* [Model Context Protocol (MCP) an overview](https://www.philschmid.de/mcp-introduction?source=post_page-----7dee927e7223---------------------------------------#why-is-there-so-much-hype-did-mcp-win)  
+* [mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners)  
+* [Protocolo de Contexto Modelo (MCP)](https://ai.pydantic.dev/mcp/)
+* [MCP](https://github.com/modelcontextprotocol)
+* [MCP - servers](https://github.com/modelcontextprotocol/servers)  
+* [Brave Search API](https://brave.com/search/api/tools/)  
+* [Google Search API](https://serpapi.com/)  
+* [Dify](https://dify.ai)  
+* [PydanticAI](https://ai.pydantic.dev/)  
 
 
 ## ▶️ Videos recomendados
@@ -165,8 +168,8 @@ Selección de videos para reforzar visualmente los temas abordados
 * [AI Search Agents Redefined: Agentic Research, MCP, & Tool Calling](https://www.youtube.com/watch?v=pUUzXimhUuA&t=1s)
 * [What is MCP?](https://www.youtube.com/watch?v=eur8dUO9mvE)
 * [MCP vs API](https://www.youtube.com/watch?v=7j1t3UZA1TY&t=78s)
-
-
+* [¿Qué es MCP? Explicación del Protocolo de Contexto Modelo](https://www.youtube.com/watch?v=AdODsQdGHz0)
+ 
 
 ## 📚 Cursos adicionales recomendados
 Recursos complementarios para seguir aprendiendo y fortaleciendo tus habilidades.
