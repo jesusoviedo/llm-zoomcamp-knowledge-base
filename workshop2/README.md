@@ -125,6 +125,14 @@ Para explorar cómo **PydanticAI** permite controlar y validar las salidas gener
 
 Si quieres aprender cómo está estructurado un asistente de chat que integra funciones como herramientas, maneja la interacción con modelos de OpenAI y presenta resultados en entornos como Jupyter Notebook, revisa el archivo [`understanding_chat_assistant.ipynb`](./notebook/understanding_chat_assistant.ipynb).
 
+#### **6. Integración de MCP (Model Context Protocol) con PydanticAI**
+
+Para comprender cómo integrar **MCP (Model Context Protocol)** con **PydanticAI** y crear sistemas más robustos de validación y manejo de contexto, puedes explorar esta implementación dividida en tres partes:
+
+- [`using_mcp_with_pydanticai_part_1.ipynb`](./notebook/using_mcp_with_pydanticai_part_1.ipynb) - Fundamentos de la integración MCP-PydanticAI
+- [`using_mcp_with_pydanticai_part_2.ipynb`](./notebook/using_mcp_with_pydanticai_part_2.ipynb) - Implementación avanzada y casos de uso prácticos
+
+Esta combinación te permitirá aprovechar las capacidades de gestión de contexto de MCP junto con la validación estructurada de datos que ofrece PydanticAI.
 
 ## 🔗 Lectura recomendada
 Recomendado para profundizar en los conceptos clave y ampliar tu comprensión
