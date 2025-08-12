@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "ipywidgets>=8.1.7",
-    "logfire>=4.2.0",
+    "logfire[requests]>=4.2.0",
     "markdown>=3.8.2",
     "minsearch>=0.0.4",
     "notebook>=7.4.4",
