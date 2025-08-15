@@ -140,6 +140,7 @@ Para comprender cómo integrar **MCP (Model Context Protocol)** con **PydanticAI
 
 - [`using_mcp_with_pydanticai_part_1.ipynb`](./notebook/using_mcp_with_pydanticai_part_1.ipynb) - Fundamentos de la integración MCP-PydanticAI
 - [`using_mcp_with_pydanticai_part_2.ipynb`](./notebook/using_mcp_with_pydanticai_part_2.ipynb) - Implementación avanzada y casos de uso prácticos
+- [`using_mcp_with_pydanticai_part_3.ipynb`](./notebook/using_mcp_with_pydanticai_part_3.ipynb) - MCP Run Python: Ejecución segura de código
 
 Esta combinación te permitirá aprovechar las capacidades de gestión de contexto de MCP junto con la validación estructurada de datos que ofrece PydanticAI.
 
