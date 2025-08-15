@@ -200,6 +200,7 @@ hw_workshop1/notebook/zoomcamp_pipeline.duckdb
 
 # Workshop 2
 workshop2/notebook/node_modules
+workshop2/notebook/mcp/node_modules
 
 # Week 3
 week3/notebook/data
